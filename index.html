@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio OS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="boot"></div>
+<canvas id="matrix"></canvas>
+
+<div id="desktop">
+<nav>
+<a href="index.html">Home</a>
+<a href="terminal.html">Terminal</a>
+<a href="resume.pdf">Resume</a>
+</nav>
+
+<h1>👨‍💻 Hi, I'm [Your Name]</h1>
+<p>🎓 JEE Advanced Aspirant | Future IITian | Programmer</p>
+
+<div class="card">
+<h2>📚 Academic Focus</h2>
+<p>Physics • Chemistry • Mathematics (JEE Advanced Level)</p>
+<p>Preparing for Indian Institutes of Technology (IIT)</p>
+</div>
+
+<div class="card">
+<h2>💻 Technical Skills</h2>
+<p>HTML, CSS, JavaScript</p>
+<p>Python (Learning)</p>
+<p>Android Development</p>
+<p>IoT with ESP32 / Raspberry Pi</p>
+</div>
+
+<div class="card">
+<h2>🚀 Projects</h2>
+<p>✔ Android Tap Game</p>
+<p>✔ Portfolio Operating System UI</p>
+<p>✔ IoT Hardware Experiments</p>
+</div>
+
+</div>
+
+<script src="matrix.js"></script>
+
+<script>
+// BOOT SYSTEM
+const boot = document.getElementById("boot");
+const lines = [
+"Initializing Academic OS...",
+"Loading JEE Preparation Modules...",
+"Mounting Coding Environment...",
+"Connecting Neural Learning Engine...",
+"System Ready ✔",
+"Launching Desktop..."
+];
+let i=0;
+
+function bootScreen(){
+  if(i<lines.length){
+    boot.innerHTML += lines[i]+"<br>";
+    i++;
+    setTimeout(bootScreen, 600);
+  } else {
+    setTimeout(()=>{
+      boot.style.display="none";
+      document.getElementById("desktop").style.display="block";
+    },1000);
+  }
+}
+bootScreen();
+</script>
+
+</body>
+</html>

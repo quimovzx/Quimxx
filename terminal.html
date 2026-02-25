@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Terminal</title>
+<style>
+body {background:black;color:#00ff00;font-family:monospace;padding:20px;}
+input {background:black;color:#00ff00;border:none;font-size:16px;width:80%;}
+</style>
+</head>
+<body>
+
+<h3>student@IIT-prep:~$</h3>
+<div id="out"></div>
+<input id="cmd" autofocus>
+
+<script>
+const out=document.getElementById("out");
+const cmd=document.getElementById("cmd");
+
+cmd.addEventListener("keydown",e=>{
+if(e.key==="Enter"){
+ let c=cmd.value;
+ let r="";
+ if(c=="whoami") r="JEE Aspirant | Future IITian | Programmer";
+ else if(c=="skills") r="HTML CSS JS Python Android IoT";
+ else if(c=="projects") r="TapGame, PortfolioOS, IoT Experiments";
+ else if(c=="goal") r="Crack JEE Advanced and join IIT";
+ else r="command not found";
+ out.innerHTML += "<p>$ "+c+"<br>"+r+"</p>";
+ cmd.value="";
+}
+});
+</script>
+
+</body>
+</html>

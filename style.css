@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: black;
+  color: #00ff9c;
+  overflow: hidden;
+}
+
+#boot {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #00ff9c;
+  padding: 20px;
+  font-size: 16px;
+  z-index: 10;
+}
+
+#desktop {
+  display: none;
+  text-align: center;
+}
+
+nav {
+  background: black;
+  border-bottom: 1px solid #00ff9c;
+  padding: 10px;
+}
+
+nav a {
+  color: #00ff9c;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.card {
+  background: rgba(0,255,156,0.1);
+  padding: 15px;
+  margin: 10px auto;
+  width: 80%;
+  border: 1px solid #00ff9c;
+  border-radius: 10px;
+}
+
+button {
+  background: #00ff9c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
